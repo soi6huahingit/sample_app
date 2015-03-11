@@ -3,10 +3,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
+    gem 'guard-rspec', '0.5.5'
     gem 'sqlite3'
-    gem 'rspec-rails', '2.9.0'
+    gem 'minitest'
+    'shoulda-matchers'
 end
 
 # Gems used only for assets and not required # in production environments by default. 
@@ -22,7 +25,12 @@ end
 gem 'jquery-rails'
 
 group :test do
+     gem 'rspec-rails', '2.9.0'
      gem 'capybara', '1.1.2'
+     gem 'rb-fsevent', '0.9', :require => false
+     gem 'growl', '1.0.3'
+     gem 'guard-spork', '0.3.2'
+     gem 'spork', '0.9.0'
 end
 
 group :production do 
